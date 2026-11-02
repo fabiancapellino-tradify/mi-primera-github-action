@@ -1,0 +1,16 @@
+
+name: "Saludo Personalizado"
+description: "Una Action que saluda a una persona"
+
+inputs:
+  nombre:
+    description: "Nombre de la persona"
+    required: true
+    default: "Estudiante"
+
+runs:
+  using: "composite"
+  steps:
+    - name: Mostrar saludo
+      shell: bash
+      run: echo "¡Hola, ${{ inputs.nombre }}! Tu GitHub Action funciona correctamente."
