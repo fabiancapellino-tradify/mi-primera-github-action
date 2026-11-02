@@ -1,0 +1,17 @@
+
+name: Probar mi GitHub Action
+
+on:
+  workflow_dispatch:
+
+jobs:
+  probar:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Descargar repositorio
+        uses: actions/checkout@v4
+
+      - name: Ejecutar mi Action
+        uses: ./
+        with:
+          nombre: "Juan"
